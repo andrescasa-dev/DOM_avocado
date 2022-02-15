@@ -1,5 +1,12 @@
 const baseUrl = "https://platzi-avo.vercel.app";
 const nodeApp = document.getElementById('app');
+const formatPrice = price =>{
+  return new window.Intl.NumberFormat('en-US',{
+    currency: "USD",
+    style: "currency"
+  }).format(price);
+}
+
 /**
  * Fetch data using promises.
  */
@@ -33,14 +40,23 @@ async function displayData(){
   responseJson.data.forEach(avocado => {
     const img = document.createElement('img');
     img.src = `${baseUrl}${avocado.image}`;
+    img.className = "rounded-full";
+
     const title = document.createElement('h2');
     title.textContent = avocado.name;
-    const price = document.createElement('div');
-    price.textContent = avocado.price;
 
-    const container = document.createElement('div');
-    container.append(img, title, price);
-    fragment.appendChild(container);
+    const price = document.createElement('div');
+    price.textContent = formatPrice(avocado.price);
+
+    const priceAndTile = document.createElement('div');
+    priceAndTile.append(title, price);
+    priceAndTile.className = 'info';
+
+    const card = document.createElement('div');
+    card.append(img, priceAndTile);
+    card.className = "card";
+
+    fragment.appendChild(card);
   });
   nodeApp.append(fragment);
 }
