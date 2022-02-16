@@ -8,48 +8,26 @@
       name="description"
       content="Web site created using create-snowpack-app"
     />
-    <!--
-      Snowpack will replace %PUBLIC_URL% with the value you have for `baseUrl` in `snowpack.config.js`.
-      Make sure to update it with your GitHub Page URL. https://<your-username>.github.io/<your-repo-name>
-
-      More about config options:
-      - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
-    -->
     <link
       rel="stylesheet"
       type="text/css"
       href="%PUBLIC_URL%/_dist_/index.css"
     />
-    <title>Avocados API</title>
+    <title>Avocados 🥑</title>
   </head>
-  <body>
-    <!--
-      This HTML file is a template.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-
-      Start modyfing from here.
-    -->
-    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <p
-          class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
-        >
-          Platzi
-        </p>
-        <h3
-          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-        >
-          Avocados API
-        </h3>
-        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
-          i don't know
-        </p>
-      </div>
-      <div id="app"></div>
-    </div>
-    <!-- Add more scripts here -->
+  <body class="body">
+    <header class="header">
+      <h2 class="txt-md">
+        AndresCasa_dev
+      </h2>
+      <h1 class="txt-lg">
+        ¡Avocados!
+      </h1>
+      <p class="txt-sm">
+        This project consume the <a href="https://platzi-avo.vercel.app/api/avo"> avocados API of Platzi</a>
+      </p>
+    </header>
+    <div id="app" class="app"></div>
     <script type="module" src="%PUBLIC_URL%/_dist_/index.js"></script>
   </body>
 </html>

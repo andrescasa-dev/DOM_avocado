@@ -43,10 +43,12 @@ async function displayData(){
     img.className = "rounded-full";
 
     const title = document.createElement('h2');
+    title.className = "txt-md";
     title.textContent = avocado.name;
 
     const price = document.createElement('div');
     price.textContent = formatPrice(avocado.price);
+    price.className = "txt-md";
 
     const priceAndTile = document.createElement('div');
     priceAndTile.append(title, price);

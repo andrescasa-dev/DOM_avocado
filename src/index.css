@@ -1,3 +1,87 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --blue: rgb(42, 107, 160)
+}
+
+html{
+  font-size: 62.5%;
+}
+
+.body{
+  font-size: 1.6rem;
+  background-color: #f5f5f5;
+  /* el problema está si quiero centrar el elemento */
+  place-items: center;
+  text-align: center;
+}
+
+.header{
+  margin-top: 10px;
+  display: grid;
+  gap: 3px;
+  min-width: 20px;
+}
+
+.header :first-child{
+  color: var(--blue);
+}
+
+a{
+  color: var(--blue);
+}
+
+.txt-md{
+  font-size: 1.6rem;
+}
+
+.txt-lg{
+  font-size: 2.8rem;
+}
+
+.txt-sm{
+  font-size: 1.2rem;
+}
+
+.app{
+  display: grid;
+  margin-block-start: 20px;
+  gap: 30px;
+  max-width: 1400px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+}
+
+.card{
+  border-radius: 20px;
+  background: #f5f5f5;
+  box-shadow:  20px 20px 40px #d0d0d0,
+             -20px -20px 40px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 20px;
+  text-align: center;
+}
+
+.card .info{
+  text-align: left;
+}
+
+.card .info div{
+  color: #7c7c7c;
+}
+
+.card img{
+  width: 100px;
+  margin-inline-end: 15px;
+}
+
