@@ -1,5 +1,7 @@
 const baseUrl = "https://platzi-avo.vercel.app";
+
 const nodeApp = document.getElementById('app');
+const btn_switch = document.getElementById("btn_toggle");
 
 /**
  * 
@@ -58,3 +60,9 @@ async function displayData(){
 }
 
 displayData();
+
+btn_switch.addEventListener('click', (event) => {
+  document.body.classList.toggle("dark-theme");
+  console.log("click en el toggle");
+});
+
