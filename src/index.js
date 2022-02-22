@@ -1,30 +1,12 @@
 const baseUrl = "https://platzi-avo.vercel.app";
 const nodeApp = document.getElementById('app');
+
 const formatPrice = price =>{
   return new window.Intl.NumberFormat('en-US',{
     currency: "USD",
     style: "currency"
   }).format(price);
 }
-
-/**
- * Fetch data using promises.
- */
-// fetch(API_URL).then(response => response.json().then(responseJson => {
-//   const nodes = [];
-//   responseJson.data.forEach( avocado => {
-//     const img = document.createElement('img');
-    
-//     const title = document.createElement('h2');
-    
-//     const price = document.createElement('div');
-
-//     const container = document.createElement('div');
-//     container.append(img, title, price);
-//     nodes.push(container);
-//   });
-//   document.body.append(...nodes);
-// }));
 
 async function fetchData(){
   const response = await fetch(`${baseUrl}/api/avo`);
@@ -60,7 +42,10 @@ async function displayData(){
 
     fragment.appendChild(card);
   });
+  //Since there are few avocados, I copy the group of avocados in order to show the responsive design.
+  const copyFragment = fragment.cloneNode(true);
   nodeApp.append(fragment);
+  nodeApp.append(copyFragment);
 }
 
 displayData();
