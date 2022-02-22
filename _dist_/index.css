@@ -1,3 +1,103 @@
-@import "../_snowpack/pkg/tailwindcss/dist/base.css";
-@import "../_snowpack/pkg/tailwindcss/dist/components.css";
-@import "../_snowpack/pkg/tailwindcss/dist/utilities.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --green: #93AD4A
+} 
+
+html{
+  font-size: 62.5%;
+}
+
+.body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.main{
+  display: grid; 
+  align-items: flex-start;
+  justify-content: center;
+  grid-template-columns: minmax(100px, 1300px);
+  min-height: 85vh;
+}
+
+.header{
+  margin-block-start: 20px;
+  display: grid;
+  gap: 3px;
+  min-width: 20px;
+}
+
+.header :first-child{
+  color: var(--green);
+}
+
+a{
+  color: var(--green);
+}
+
+.txt-md{
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.txt-lg{
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+.txt-sm{
+  font-size: 1.4rem;
+}
+
+.card .txt-md:nth-child(2){
+  font-weight: 200;
+}
+
+.app{
+  margin: 40px 100px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  /* responsive using only grid, auto-fit fits the grid to certain number of columns. As long as each column has min 325, the grid will add a new column*/
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.card{
+  padding: 20px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  box-shadow:  20px 20px 40px #d0d0d0,
+             -20px -20px 40px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+}
+
+.card .info{
+  text-align: left;
+}
+
+.card .info div{
+  color: #7c7c7c;
+}
+
+.card img{
+  width: 100px;
+  margin-inline-end: 15px;
+  border-radius: 50%;
+}
+
+.footer{
+  margin-block: 20px;
+}
