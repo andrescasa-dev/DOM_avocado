@@ -63,6 +63,5 @@ displayData();
 
 btn_switch.addEventListener('click', (event) => {
   document.body.classList.toggle("dark-theme");
-  console.log("click en el toggle");
 });
 
