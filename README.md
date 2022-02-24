@@ -11,8 +11,8 @@ In this project I could practice fetching, Manipulation of DOM, grid only respon
 
 # features
 
-## format price
-Was used **Intl.numberFormat()**, in order to show avocados prices in the US currency format.
+## Price formatting
+In order to show avocados prices in the US currency format, was used **Intl.numberFormat()**.
 
 ## Manipulation of DOM
 First of all, the project fetch a [Platzi avocados API](https://platzi-avo.vercel.app "API") to get all related data about avocados.
