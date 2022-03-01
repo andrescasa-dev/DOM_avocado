@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: 'https://andrescasa-dev.github.io/DOM_avocado/',
+    baseUrl: 'https://andrescasa-dev.github.io/DOM_avocado',
   },
 }
