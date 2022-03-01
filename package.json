@@ -1,4 +1,5 @@
 {
+  "homepage": "https://andrescasa-dev.github.io/DOM_avocado/",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
